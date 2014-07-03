@@ -13,6 +13,7 @@ public class CassandraClient {
 				.build();
 		Metadata metadata = cluster.getMetadata();
 		System.out.println("Testing sysout");
+		System.out.println("Testing sysout 2");
 		System.out.printf("Connected to cluster: %s\n",
 				metadata.getClusterName());
 		for (Host host : metadata.getAllHosts()) {
@@ -24,6 +25,7 @@ public class CassandraClient {
 	public void close() {
 		cluster.shutdown();
 		System.out.println("Testing sysout");
+		System.out.println("Testing sysout 2");
 	}
 	
 	public static void main(String[] args){
@@ -36,5 +38,6 @@ public class CassandraClient {
 		
 		client.close();
 		System.out.println("Testing sysout");
+		System.out.println("Testing sysout 2");
 	}
 }
