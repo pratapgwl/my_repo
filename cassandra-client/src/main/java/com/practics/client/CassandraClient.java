@@ -12,6 +12,7 @@ public class CassandraClient {
 				// .withSSL() // Uncomment if using client to node encryption
 				.build();
 		Metadata metadata = cluster.getMetadata();
+		System.out.println("Testing sysout");
 		System.out.printf("Connected to cluster: %s\n",
 				metadata.getClusterName());
 		for (Host host : metadata.getAllHosts()) {
@@ -22,6 +23,7 @@ public class CassandraClient {
 
 	public void close() {
 		cluster.shutdown();
+		System.out.println("Testing sysout");
 	}
 	
 	public static void main(String[] args){
@@ -33,5 +35,6 @@ public class CassandraClient {
 		//client.connect("localhost");
 		
 		client.close();
+		System.out.println("Testing sysout");
 	}
 }
